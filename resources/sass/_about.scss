@@ -1,0 +1,83 @@
+.about-pg-header {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    display: table;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../images/about-header.jpg");
+}
+
+.about-pg-container {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 15vh;
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+}
+
+.about-header-text h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-shadow: .2rem .2rem .8rem red;
+    padding-bottom: .5rem;
+}
+
+.about-header-text h3 {
+    font-size: 1.5rem;
+    text-shadow: .2rem .2rem .8rem black;
+    padding-bottom: 1.5rem;
+}
+
+.jumbotron-first-image, .jumbotron-second-image {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+}
+
+.jumbotron-first-text, .jumbotron-second-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.jumbotron-first-text h1, .jumbotron-second-text h1 {
+    border-bottom: .05em solid crimson;
+    padding-bottom: .5em;
+}
+
+.jumbotron-first-text h3, .jumbotron-second-text h3 {
+    padding-top: 1rem;
+}
+
+.jumbotron-first-text p, .jumbotron-second-text p {
+    margin-bottom: 5%;
+}
+
+.jumbotron-second-img-container {
+    order: 2;
+}
+
+@media screen and (max-width: 767px) {
+    .about-header-text h1 {
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    .about-header-text h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    .jumbotron-second-img-container {
+        order: 1;
+    }
+    .jumbotron-second-text {
+        order: 2;
+    }
+    .jumbotron-first-image, .jumbotron-second-image {
+        width: 80% !important;
+    }
+}

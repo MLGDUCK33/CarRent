@@ -1,0 +1,200 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif !important;
+    color: #505962;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+/*--- Fix for Fixed Navbar jumping on scroll --*/
+.fixed-top {
+    -webkit-backface-visibility: hidden;
+}
+
+/*--- Fixed Landing Page Section --*/
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    z-index: -1;
+}
+
+.home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/*--- iOS Fixed Background Image --*/
+.fixed-background {
+    position: relative;
+    width: 100%;
+}
+
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999 !important;
+}
+
+.fixed {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/*  NAVIGATION  */
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand img {
+    height: 3rem;
+}
+
+.navbar-nav li {
+    padding-right: .6rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75) !important;
+    padding-top: .8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: crimson !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: red !important;
+    padding-top: .8rem;
+}
+
+.nav-dropdown-menu {
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.1rem !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.nav-dropdown-item {
+    color: white !important;
+}
+
+.nav-dropdown-item:hover, .dropdown-item:focus {
+    background-color: #4e555b !important;
+}
+
+.nav-dropdown-item:active, .nav-dropdown-item.active {
+    background-color: crimson !important;
+}
+
+.layout-dropdown {
+    margin-top: 14px !important;
+}
+
+/*  END NAVIGATION  */
+
+/*  FOOTER SECTION   */
+.footer {
+    background-color: #4e555b !important;
+    color: white;
+}
+
+.footer-img {
+    height: 5rem;
+    margin: 1.5rem 0;
+}
+
+.footer-a {
+    color: white;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: darken(#ff143c, 10%);
+    margin: 1.2rem 1rem 0 0;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.owl-dot span {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid crimson;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 5px;
+    opacity: 1;
+}
+
+.owl-dot.active span, .owl-dot:hover span {
+    background: crimson;
+    border-color: #fff;
+}
+
+@media screen and (max-width: 360px) {
+    .footer-img {
+        height: 3.6rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        background: rgba(0, 0, 0, 1);
+    }
+    .nav-dropdown-menu {
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/*  END FOOTER SECTION   */

@@ -1,0 +1,376 @@
+/*  LANDING SECTION    */
+.home-inner {
+    background-image: url("../images/landing-bg.jpg");
+}
+
+.caption {
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+}
+
+.caption h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-shadow: .2rem .2rem .8rem red;
+    padding-bottom: .5rem;
+}
+
+.caption h3 {
+    font-size: 1.5rem;
+    text-shadow: .2rem .2rem .8rem black;
+    padding-bottom: 1.5rem;
+}
+
+.btn-lg {
+    border-width: medium !important;
+    border-radius: 0.6rem !important;
+    padding: .5rem 2.2rem !important;
+    font-size: 1.2rem !important;
+}
+
+/*  END LANDING SECTION    */
+
+/*  ABOUT SECTION   */
+.first-jumbotron {
+    margin-bottom: 0 !important;
+    background-color: #dfe2e5 !important;
+    border-radius: 0.3rem !important;
+}
+
+.about-row {
+    margin: 0 10% 0 10% !important;
+}
+
+.about-icon {
+    font-size: 40px;
+    color: crimson;
+}
+
+.about-item {
+    margin: 0 20px 0 20px;
+}
+
+.about-title {
+    padding-bottom: 3.5rem;
+}
+
+.about-heading {
+    margin-bottom: 0 !important;
+    color: #4e555b !important;
+    font-size: 2rem;
+}
+
+.about-heading-underline {
+    padding-top: -0.5rem;
+    margin: auto;
+    width: 50px;
+    height: 10px;
+    border-bottom: 1px solid crimson;
+}
+
+/*  END ABOUT SECTION   */
+
+/*  OUR CARS SECTION    */
+.second-jumbotron {
+    margin-bottom: 0 !important;
+    background-color: #ffffff !important;
+    border-radius: 0.3rem !important;
+}
+
+
+.car-carousel-wrapper {
+    width: 80vw;
+    background-color: #dfe2e5;
+    margin: 50px auto;
+    margin-top: 20px !important;
+    border-radius: 20px;
+    border: 2px #d7d7d7;
+    box-shadow: 0px 0px 20px 0px rgba(255, 33, 65, 0.95);
+}
+
+.car-carousel-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-carousel-img {
+    -webkit-box-flex: 10000;
+    flex-grow: 10000;
+    -webkit-transform: scale(2);
+    transform: scale(1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+}
+
+.car-carousel-percent-container {
+    padding-top: 0 !important;
+}
+
+.car-carousel-percent-box {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 2px !important;
+}
+
+.car-carousel-percent-text {
+    float: left;
+    margin-bottom: 0 !important;
+    font-size: 20px;
+}
+
+.car-carousel-line {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: .5em;
+    background: #ebeef9;
+    line-height: 1em;
+    overflow: hidden;
+
+}
+
+.car-carousel-line i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #ff3f65;
+}
+
+.carousel-indicators li {
+    background-color: #f00 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+/*  END OUR CARS SECTION    */
+
+/*  PARTNERS SECTION   */
+.text-icon {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.partners-title {
+    padding-bottom: 3.5rem;
+}
+
+.partners-heading {
+    margin-bottom: 0 !important;
+    color: #4e555b !important;
+    font-size: 2rem;
+}
+
+.partners-heading-underline {
+    padding-top: -0.5rem;
+    margin: auto;
+    width: 50px;
+    height: 10px;
+    border-bottom: 1px solid crimson;
+}
+
+.testimonial-owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-item {
+    background: #fff;
+    text-align: center;
+    padding: 30px 30px 70px;
+    margin-right: 40px;
+    margin-bottom: 18vh;
+    position: relative;
+    margin-top: 10px;
+}
+
+.testimonial-item:before,
+.testimonial-item:after {
+    content: "";
+    border-top: 80px solid #fff;
+    border-right: 125px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+}
+
+.testimonial-item:after {
+    border-right: none;
+    border-left: 125px solid transparent;
+    left: auto;
+    right: 0;
+}
+
+.testimonial-item .description {
+    font-size: 16px;
+    color: #4e555b;
+    text-align: justify;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    letter-spacing: -1px;
+}
+
+.testimonial-item .testimonial-content {
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.testimonial-item .image {
+    display: inline-block;
+    border: 6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px crimson;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.testimonial-item .image img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonial-item .name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4e555b;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+}
+
+.testimonial-item .position {
+    display: block;
+    font-size: 14px;
+    color: crimson;
+}
+
+
+.image img {
+    width: 100px !important;
+    height: 50px;
+}
+
+/*  END PARTNERS SECTION   */
+
+/*  CONTACT SECTION   */
+
+.contact {
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: crimson;
+    box-shadow: 0 0 20px 5px crimson;
+
+}
+
+.contact-form-input:focus {
+    border-color: lightgreen !important;
+    box-shadow: 0 0 0 0.2rem rgba(144, 238, 144, 0.72) !important;
+}
+
+.contact-text-accept {
+    width: 90%;
+}
+
+.contact-text-accept label {
+    display: inline;
+}
+
+.contact-form-label {
+    margin-bottom: 0.1rem !important;
+}
+
+.contact-form-input {
+    margin-bottom: 0.6rem;
+    width: 90% !important;
+}
+
+.contact-form-btn {
+    margin-bottom: 1rem;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/*  END CONTACT SECTION   */
+
+@media screen and (max-width: 360px) {
+    .navbar-brand img {
+        height: 2rem;
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .testimonial-item {
+        margin-right: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 991.99px) {
+    .map-responsive {
+        padding-bottom: 70%;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+    .navbar-brand img {
+        height: 4rem;
+    }
+    .about-row {
+        margin: 0 0 0 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .caption h1 {
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    .caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    .btn-lg {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+    }
+    .partners-item {
+        margin-bottom: 0 !important;
+    }
+    .partners-item img {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+}
+
+

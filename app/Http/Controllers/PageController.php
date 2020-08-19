@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -19,5 +20,10 @@ class PageController extends Controller
     public function cars()
     {
         return view('our-cars');
+    }
+
+    public function panel()
+    {
+        return view('panel/index');
     }
 }

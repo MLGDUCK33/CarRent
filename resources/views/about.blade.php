@@ -16,16 +16,18 @@
     <div class="jumbotron first-jumbotron">
         <div class="col-12">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12" data-aos-duration="1200" data-aos="fade-right">
                     <img src="../images/about-office.jpg" class="jumbotron-first-image" alt="Office">
                 </div>
                 <div class="col-md-5 px-0 col-12 jumbotron-first-text">
-                    <h1>Who we are ?</h1>
-                    <h3>Our Story</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquid architecto at atque enim
+                    <h1 data-aos-duration="800" data-aos="fade-up">Who we are ?</h1>
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Our Story</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ab ad aliquid architecto at atque enim
                         molestias possimus quae quasi sit.</p>
-                    <h3>Years of experience</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam dolorem natus neque numquam
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Years of experience</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ad aliquam dolorem natus neque numquam
                         omnis perspiciatis recusandae rem sunt voluptatum.</p>
                 </div>
             </div>
@@ -35,15 +37,18 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-md-5 col-md-push-7 px-0 offset-md-1 col-12 jumbotron-second-text">
-                    <h1>Our team</h1>
-                    <h3>Professionals only</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquid architecto at atque enim
+                    <h1 data-aos-duration="800" data-aos="fade-up">Our team</h1>
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Professionals only</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ab ad aliquid architecto at atque enim
                         molestias possimus quae quasi sit.</p>
-                    <h3>Years of experience in the automotive industry</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam dolorem natus neque numquam
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Years of experience in the automotive industry</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ad aliquam dolorem natus neque numquam
                         omnis perspiciatis recusandae rem sunt voluptatum.</p>
                 </div>
-                <div class="col-md-6 col-md-pull-6 col-12 jumbotron-second-img-container">
+                <div class="col-md-6 col-md-pull-6 col-12 jumbotron-second-img-container" data-aos-duration="1200"
+                     data-aos="fade-left">
                     <img src="../images/about-team.jpg" class="jumbotron-second-image" alt="Office">
                 </div>
             </div>
@@ -52,16 +57,18 @@
     <div class="jumbotron first-jumbotron">
         <div class="col-12">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12" data-aos-duration="1200" data-aos="fade-right">
                     <img src="../images/about-cars.jpg" class="jumbotron-first-image" alt="Office">
                 </div>
                 <div class="col-md-5 px-0 col-12 jumbotron-first-text">
-                    <h1>Our Cars</h1>
-                    <h3>Hundreds of models</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquid architecto at atque enim
+                    <h1 data-aos-duration="800" data-aos="fade-up">Our Cars</h1>
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Hundreds of models</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ab ad aliquid architecto at atque enim
                         molestias possimus quae quasi sit.</p>
-                    <h3>Only proven and safe vehicles</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam dolorem natus neque numquam
+                    <h3 data-aos-duration="1000" data-aos="fade-up">Only proven and safe vehicles</h3>
+                    <p data-aos-duration="1200" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ad aliquam dolorem natus neque numquam
                         omnis perspiciatis recusandae rem sunt voluptatum.</p>
                 </div>
             </div>

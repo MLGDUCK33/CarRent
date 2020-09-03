@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 
 class CarController extends Controller
@@ -38,18 +39,25 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request->hasFile('image')) {
+            $request->request->add(['test' => 1]);
+            $imagename = $request->image->getClientOriginalName();
+            $request->image->storeAs('images', $imagename, 'public');
+        }
+        $request->request->add(['slug' => Str::slug($request->name, '-')]);
+
         $request->validate([
             'name' => 'required',
-            'slug' => 'required',
+            'slug' => 'required|unique:cars',
             'type' => 'required',
             'image' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
         ]);
 
         Car::create($request->all());
 
-        return redirect()->route('panel.cars.index')->with('success', 'Car created successfully.');
+        return redirect()->route('cars.index')->with('success', 'Car created successfully.');
     }
 
     /**
@@ -108,5 +116,11 @@ class CarController extends Controller
         $car->delete();
 
         return redirect()->route('panel.cars.index')->with('success', 'Car deleted successfully');
+    }
+
+    protected function uploadImage(Request $request)
+    {
+        $request->image->store('images', 'public');
+
     }
 }

@@ -17,10 +17,10 @@ class CreateCarsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('slug')->unique();
-            $table->string('type');
-            $table->string('image');
-            $table->text('description');
-            $table->integer('price');
+            $table->string('type')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->integer('price')->nullable();
             $table->timestamps();
         });
     }

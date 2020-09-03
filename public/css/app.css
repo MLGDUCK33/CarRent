@@ -191,6 +191,16 @@ body {
   opacity: 1;
 }
 
+.pagination-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background: crimson !important;
+  border-color: #a7142f !important;
+}
+
 .owl-dot.active span,
 .owl-dot:hover span {
   background: crimson;
@@ -905,7 +915,7 @@ body {
 }
 
 .all-cars-card {
-  min-height: 350px !important;
+  min-height: 400px !important;
   border: 2px solid rgba(116, 123, 129, 0.5) !important;
 }
 
@@ -943,6 +953,34 @@ body {
   .all-cars-img-container img {
     width: 70% !important;
   }
+}
+
+.admin-panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  z-index: 1;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(/images/register-login-image.jpg?650de1f8dd11822519307fed1a9b6517);
+}
+
+.admin-panel-panel {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 15vh;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.admin-panel-button {
+  width: 60% !important;
+}
+
+.admin-panel-button-car {
+  background-color: crimson !important;
+  border-color: #a50c22 !important;
 }
 
 /*!

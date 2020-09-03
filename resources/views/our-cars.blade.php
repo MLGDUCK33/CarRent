@@ -86,58 +86,25 @@
         </div>
         <div class="container-fluid">
             <div class="row">
+                @foreach($cars as $car)
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="card all-cars-card">
                         <div class="all-cars-img-container">
-                            <img class="card-img-top" src="../images/highlighted-car-3.png" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('/storage/images/'.$car->image) }}"
+                                 alt="{{$car->name}}">
                         </div>
                         <div class="card-body all-cars-body text-center">
-                            <h4 class="card-title text-uppercase">audi a6</h4>
-                            <h5 class="card-subtitle text-muted">Sedan</h5>
-                            <p class="card-text">Price: 80$ / DAY</p>
+                            <h4 class="card-title text-uppercase">{{$car->name}}</h4>
+                            <h5 class="card-subtitle text-muted">{{$car->type}}</h5>
+                            <p class="card-text">Price: {{$car->price}}$ / DAY</p>
                             <a href="#" class="btn btn-outline-danger text-uppercase">ORDER NOW</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="card all-cars-card">
-                        <div class="all-cars-img-container">
-                            <img class="card-img-top" src="../images/highlighted-car-1.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body all-cars-body text-center">
-                            <h4 class="card-title text-uppercase">bmw m3</h4>
-                            <h5 class="card-subtitle text-muted">Sport Car</h5>
-                            <p class="card-text">Price: 80$ / DAY</p>
-                            <a href="#" class="btn btn-outline-danger text-uppercase">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="card all-cars-card">
-                        <div class="all-cars-img-container">
-                            <img class="card-img-top" src="../images/highlighted-car-3.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body all-cars-body text-center">
-                            <h4 class="card-title text-uppercase">audi a6</h4>
-                            <h5 class="card-subtitle text-muted">Sedan</h5>
-                            <p class="card-text">Price: 80$ / DAY</p>
-                            <a href="#" class="btn btn-outline-danger text-uppercase">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                    <div class="card all-cars-card">
-                        <div class="all-cars-img-container">
-                            <img class="card-img-top" src="../images/highlighted-car-1.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body all-cars-body text-center">
-                            <h4 class="card-title text-uppercase">bmw m3</h4>
-                            <h5 class="card-subtitle text-muted">Sport Car</h5>
-                            <p class="card-text">Price: 80$ / DAY</p>
-                            <a href="#" class="btn btn-outline-danger text-uppercase">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+            </div>
+            <div class="pagination-nav">
+                {!! $cars->links() !!}
             </div>
         </div>
     </div>

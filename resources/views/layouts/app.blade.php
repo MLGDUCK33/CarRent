@@ -64,6 +64,11 @@
                         <a class="nav-link" href="{{Route("register")}}">Register</a>
                     </li>
                 @else
+                    @if (Auth::user()->permission == 'admin')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{Route("panel")}}">PANEL</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link logout" href="{{Route("logout")}}"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>

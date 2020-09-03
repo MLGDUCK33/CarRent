@@ -7,7 +7,6 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('cars.create') }}"> Create New Product</a>
                     <a class="btn btn-danger" href="{{ route('panel') }}"> Back to panel</a>
                 </div>
             </div>
@@ -23,22 +22,28 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Role</th>
                 <th>Image</th>
-                <th>Details</th>
+                <th>Email</th>
                 <th width="280px">Action</th>
             </tr>
-            @foreach ($cars as $car)
+            @foreach ($users as $user)
                 <tr>
-                    <td>{{ $car->id }}</td>
-                    <td>{{ $car->name }}</td>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->permission }}</td>
                     <td>
-                        <img style="width: 200px" src="{{ asset('/storage/images/'.$car->image) }}"></td>
+                        @if(isset($user->image))
+                            <img style="width: 200px" src="{{ asset('/storage/images/'.$user->image) }}"></td>
+                    @else
+                        NONE
+                    @endif
 
-                    <td>{{ $car->description }}</td>
+                    <td>{{ $user->email }}</td>
                     <td>
-                        <form action="{{ route('cars.destroy',$car->id) }}" method="POST">
-                            <a class="btn btn-info" href="{{ route('cars.show',$car->id) }}">Show</a>
-                            <a class="btn btn-primary" href="{{ route('cars.edit',$car->id) }}">Edit</a>
+                        <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+                            <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+                            <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
 
                             @csrf
                             @method('DELETE')
@@ -50,7 +55,7 @@
         </table>
 
         <div class="pagination-nav">
-            {!! $cars->links() !!}
+            {!! $users->links() !!}
         </div>
     </div>
 @endsection

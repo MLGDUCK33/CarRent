@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PageController@index')->name('home');
+Route::get('/test', 'PageController@test')->name('test');
 
 Route::get('/about', 'PageController@about')->name('about');
 
@@ -23,7 +24,8 @@ Route::get('/our-cars', 'PageController@cars')->name('our-cars');
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => 'is.admin'], function () {
-    Route::get('/panel', 'PageController@panel')->name('panel');
+    Route::get('/admin-panel', 'PageController@panel')->name('panel');
     Route::resource('cars', 'CarController');
+    Route::resource('users', 'UserController');
 });
 

@@ -12,6 +12,11 @@ class PageController extends Controller
         return view('welcome');
     }
 
+    public function test()
+    {
+        return view('test');
+    }
+
     public function about()
     {
         return view('about');
@@ -19,7 +24,8 @@ class PageController extends Controller
 
     public function cars()
     {
-        return view('our-cars');
+        $cars = Car::paginate(8);
+        return view('our-cars', compact('cars'));
     }
 
     public function panel()

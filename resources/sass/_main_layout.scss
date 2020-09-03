@@ -176,6 +176,15 @@ body {
     opacity: 1;
 }
 
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background: crimson !important;
+    border-color: #a7142f !important;
+}
 .owl-dot.active span, .owl-dot:hover span {
     background: crimson;
     border-color: #fff;

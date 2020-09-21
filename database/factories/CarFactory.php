@@ -17,5 +17,8 @@ $factory->define(Car::class, function (Faker $faker) {
         'image' => 'highlighted-car-' . $faker->numberBetween(1, 3) . '.png',
         'description' => $faker->paragraph,
         'price' => $faker->numberBetween(10, 100),
+        'comfort' => $faker->numberBetween(10, 90),
+        'speed' => $faker->numberBetween(10, 90),
+        'noise' => $faker->numberBetween(10, 90),
     ];
 });

@@ -27,5 +27,6 @@ Route::group(['middleware' => 'is.admin'], function () {
     Route::get('/admin-panel', 'PageController@panel')->name('panel');
     Route::resource('cars', 'CarController');
     Route::resource('users', 'UserController');
+    Route::resource('partners', 'PartnerController');
 });
 

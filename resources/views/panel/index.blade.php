@@ -8,13 +8,13 @@
                     <div class="col-md-6 col-12 text-center">
                         <a href="{{Route("users.index")}}" class="btn btn-sq-lg btn-primary admin-panel-button">
                             <i class="fa fa-user fa-3x"></i><br/>
-                            CAR PANEL</a>
+                            USERS</a>
                     </div>
                     <div class="col-md-6 col-12 text-center">
                         <a href="{{Route("cars.index")}}"
                            class="btn btn-sq-lg btn-primary admin-panel-button admin-panel-button-car">
                             <i class="fas fa-car fa-3x"></i><br/>
-                            CAR PANEL</a>
+                            CARS</a>
                     </div>
                 </div>
             </div>

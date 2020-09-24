@@ -189,7 +189,19 @@ body {
     background: crimson;
     border-color: #fff;
 }
-
+.error{
+    color: red;
+}
+.success{
+    position: absolute !important;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20%;
+    z-index: 1000 !important;
+}
 @media screen and (max-width: 360px) {
     .footer-img {
         height: 3.6rem;

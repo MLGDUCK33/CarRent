@@ -21,6 +21,9 @@ Route::get('/about', 'PageController@about')->name('about');
 
 Route::get('/our-cars', 'PageController@cars')->name('our-cars');
 
+Route::post('/contact-us', 'ContactUsFormController@ContactUsForm')->name('contact');
+
+
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => 'is.admin'], function () {

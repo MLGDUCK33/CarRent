@@ -3,11 +3,16 @@
 @section('content')
 
     <div>
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
         <div id="home">
             <div class="landing">
                 <div class="home-wrap">
                     <div class="home-inner">
-
                     </div>
                 </div>
             </div>
@@ -426,23 +431,51 @@
                         <div class="col-12">
                             <div class="row">
                                 <div class="col-md-4 col-12">
-                                    <form action="" class="">
-                                        <i class="fas fa-user-alt"></i>
-                                        <label for="name" class="contact-form-label">Your name:</label>
-                                        <input type="text" id="name" class="form-control contact-form-input">
+                                    <form method="POST" action="{{ route('contact') }}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <i class="fas fa-user-alt"></i>
+                                            <label for="name" class="contact-form-label">Your name:</label>
+                                            <input type="text" id="name" name="name" class="form-control contact-form-input @error('name') is-invalid @enderror">
+                                            @if ($errors->has('name'))
+                                                <div class="error">
+                                                    {{ $errors->first('name') }}
+                                                </div>
+                                            @endif
+                                        </div>
 
-                                        <i class="fas fa-envelope-open-text"></i>
-                                        <label for="email" class="contact-form-label">Contact e-mail:</label>
-                                        <input type="email" id="email" class="form-control contact-form-input">
+                                        <div class="form-group">
+                                            <i class="fas fa-envelope-open-text"></i>
+                                            <label for="email" class="contact-form-label">Contact e-mail:</label>
+                                            <input type="email" id="email" name="email" class="form-control contact-form-input @error('email') is-invalid @enderror">
+                                            @if ($errors->has('email'))
+                                                <div class="error">
+                                                    {{ $errors->first('email') }}
+                                                </div>
+                                            @endif
+                                        </div>
 
-                                        <i class="fas fa-heading"></i>
-                                        <label for="msg-title" class="contact-form-label">Message title:</label>
-                                        <input type="text" id="msg-title" class="form-control contact-form-input">
+                                        <div class="form-group">
+                                            <i class="fas fa-phone-alt"></i>
+                                            <label for="msg-title" class="contact-form-label">Phone:</label>
+                                            <input type="text" id="phone" name="phone" class="form-control contact-form-input @error('phone') is-invalid @enderror">
+                                            @if ($errors->has('phone'))
+                                                <div class="error">
+                                                    {{ $errors->first('phone') }}
+                                                </div>
+                                            @endif
+                                        </div>
 
-                                        <i class="fas fa-quote-right"></i>
-                                        <label for="message" class="contact-form-label">Message text:</label>
-                                        <textarea id="message" cols="30" rows="5"
-                                                  class="form-control contact-form-input"></textarea>
+                                        <div class="form-group">
+                                            <i class="fas fa-quote-right"></i>
+                                            <label for="message" class="contact-form-label">Message:</label>
+                                            <textarea id="message" name="message" cols="30" rows="5" class="form-control contact-form-input @error('message') is-invalid @enderror"></textarea>
+                                            @if ($errors->has('message'))
+                                                <div class="error">
+                                                    {{ $errors->first('message') }}
+                                                </div>
+                                            @endif
+                                        </div>
                                         <p class="contact-text-accept text-muted text-justify">
                                             <input type="checkbox" id="accept" name="accept" class="">
                                             <label id="accept_label" for="accept">
@@ -453,8 +486,13 @@
                                                 check out our Privacy Policy
                                             </label>
                                         </p>
-                                        <button class="btn btn btn-outline-danger contact-form-btn text-center"
-                                                type="button">
+                                        @if ($errors->has('accept'))
+                                            <div class="error">
+                                                {{ $errors->first('accept') }}
+                                            </div>
+                                        @endif
+                                        <button class="btn btn btn-outline-danger contact-form-btn text-center" name="send"
+                                                type="submit">
                                             Send message
                                         </button>
                                     </form>

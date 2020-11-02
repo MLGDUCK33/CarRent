@@ -30,7 +30,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a class="navbar-brand" href="{{Route("home")}}">
-            <img src="../images/car-logo.png">
+            <img src="{{ asset('/storage/images/car-logo.png') }}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@
     <div id="footer" class="footer">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center">
-                <img class="footer-img" src="../images/car-logo.png">
+                <img class="footer-img" src="{{ asset('/storage/images/car-logo.png') }}">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eveniet illum libero magnam numquam,
                     omnis quasi quia quidem repellat tempore!</p>
                 <h2>CONTACT US</h2>

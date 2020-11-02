@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('cars.create') }}"> Create New Product</a>
+                    <a class="btn btn-success" href="{{ route('cars.create') }}"> Create New Car</a>
                     <a class="btn btn-danger" href="{{ route('panel') }}"> Back to panel</a>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <tr>
                         <td>{{ $car->id }}</td>
                         <td>{{ $car->name }}</td>
-                        <td>
+                        <td style="width: 200px">
                             <img style="width: 200px" src="{{ asset('/storage/images/'.$car->image) }}">
                         </td>
 
@@ -40,8 +40,6 @@
                         </td>
                         <td>
                             <form action="{{ route('cars.destroy',$car->id) }}" method="POST">
-                                <a class="btn btn-info" style="min-width: 80px"
-                                   href="{{ route('cars.show',$car->id) }}">Show</a>
                                 <a class="btn btn-primary" style="min-width: 80px"
                                    href="{{ route('cars.edit',$car->id) }}">Edit</a>
 

@@ -24,8 +24,9 @@ class PageController extends Controller
 
     public function cars()
     {
-        $cars = Car::paginate(8);
-        return view('our-cars', compact('cars'));
+        $cars = Car::orderBy('id','asc')->paginate(8);
+        $featured_cars = Car::where('featured','true')->find(3);
+        return view('our-cars', compact('cars','featured_cars'));
     }
 
     public function panel()

@@ -16,7 +16,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::paginate(5);
+        $cars = Car::orderBy('id','asc')->paginate(8);
 
         return view('panel.cars.index', compact('cars'));
     }
@@ -42,7 +42,7 @@ class CarController extends Controller
         if ($request->hasFile('image')) {
             $request->request->add(['test' => 1]);
             $imagename = $request->image->getClientOriginalName();
-            $request->image->storeAs('images', $imagename, 'public');
+            $request->file('image')->storeAs('images', $imagename,'public');
         }
         $request->request->add(['slug' => Str::slug($request->name, '-')]);
 
@@ -53,9 +53,27 @@ class CarController extends Controller
             'image' => 'required',
             'description' => 'required',
             'price' => 'required|numeric',
+            'comfort' => 'required|numeric',
+            'speed' => 'required|numeric',
+            'noise' => 'required|numeric',
+            'on_homepage' => 'required|numeric',
+            'featured' => 'required|numeric',
         ]);
 
-        Car::create($request->all());
+        Car::create([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'type' => $request->name,
+            'image' => $imagename,
+            'description' => $request->description,
+            'price' => $request->price,
+            'comfort' => $request->comfort,
+            'speed' => $request->speed,
+            'noise' => $request->noise,
+            'on_homepage' => $request->on_homepage,
+            'featured' => $request->featured,
+        ]);
+
 
         return redirect()->route('cars.index')->with('success', 'Car created successfully.');
     }
@@ -91,18 +109,42 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
+        if ($request->hasFile('image')) {
+            $request->request->add(['test' => 1]);
+            $imagename = $request->image->getClientOriginalName();
+            $request->file('image')->storeAs('images', $imagename,'public');
+        }else{
+            $imagename = $car->image;
+        }
+        $request->request->add(['slug' => Str::slug($request->name, '-')]);
         $request->validate([
             'name' => 'required',
             'slug' => 'required',
             'type' => 'required',
-            'image' => 'required',
             'description' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
+            'comfort' => 'required|numeric',
+            'speed' => 'required|numeric',
+            'noise' => 'required|numeric',
+            'on_homepage' => 'required|numeric',
+            'featured' => 'required|numeric',
         ]);
 
-        $car->update($request->all());
+        $car->update([
+            'name' => $request->name,
+            'slug' => $request->slug,
+            'type' => $request->name,
+            'image' => $imagename,
+            'description' => $request->description,
+            'price' => $request->price,
+            'comfort' => $request->comfort,
+            'speed' => $request->speed,
+            'noise' => $request->noise,
+            'on_homepage' => $request->on_homepage,
+            'featured' => $request->featured,
+        ]);
 
-        return redirect()->route('panel.cars.index')->with('success', 'Car updated successfully');
+        return redirect()->route('cars.index')->with('success', 'Car updated successfully');
     }
 
     /**
@@ -115,12 +157,7 @@ class CarController extends Controller
     {
         $car->delete();
 
-        return redirect()->route('panel.cars.index')->with('success', 'Car deleted successfully');
+        return redirect()->route('cars.index')->with('success', 'Car deleted successfully');
     }
 
-    protected function uploadImage(Request $request)
-    {
-        $request->image->store('images', 'public');
-
-    }
 }

@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-
+<div class="container"></div>
             <div class="caption text-center">
                 <h1>Welcome on car-rental</h1>
                 <h3>With us You can rent your dream car</h3>

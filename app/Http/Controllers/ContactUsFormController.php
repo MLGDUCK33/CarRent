@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ContactUsFormController extends Controller
 {
     public function ContactUsForm(Request $request) {
-
+dd($request);
 
         $this->validate($request, [
             'name' => 'required',

@@ -64,6 +64,69 @@
                                                            placeholder="price">
                                                 </div>
                                             </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <strong>Comfort:</strong>
+                                                    <input type="number" name="comfort" class="form-control"
+                                                           placeholder="comfort">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <strong>Speed:</strong>
+                                                    <input type="number" name="speed" class="form-control"
+                                                           placeholder="speed">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <strong>Noise:</strong>
+                                                    <input type="number" name="noise" class="form-control"
+                                                           placeholder="noise">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <strong>On homepage:</strong>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <input class="form-check-input" type="radio" name="on_homepage" id="on_homepage_y" value="1">
+                                                            <label class="form-check-label" for="on_homepage_y">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input class="form-check-input" type="radio" name="on_homepage" id="on_homepage_n" value="0" checked>
+                                                            <label class="form-check-label" for="on_homepage_n">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <strong>Featured:</strong>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <input class="form-check-input" type="radio" name="featured" id="featured_y" value="1">
+                                                            <label class="form-check-label" for="featured_y">
+                                                                Yes
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <input class="form-check-input" type="radio" name="featured" id="featured_n" value="0" checked>
+                                                            <label class="form-check-label" for="featured_n">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
@@ -78,27 +141,3 @@
         </div>
     </div>
 @endsection
-{{--    <div class="block" style="padding-top: 20vh">--}}
-{{--        <div class="row">--}}
-
-{{--            <div class="col-lg-12 margin-tb">--}}
-
-{{--                <div class="pull-left">--}}
-
-{{--                    <h2>Add New Product</h2>--}}
-
-{{--                </div>--}}
-
-{{--                <div class="pull-right">--}}
-
-{{--                    <a class="btn btn-primary" href="{{ route('cars.index') }}"> Back</a>--}}
-
-{{--                </div>--}}
-
-{{--            </div>--}}
-
-{{--        </div>--}}
-
-
-{{--    </div>--}}
-{{--@endsection--}}

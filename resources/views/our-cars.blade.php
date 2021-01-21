@@ -21,60 +21,62 @@
         <div class="container">
             <div class="row">
                 <div id="featured-slider" class="owl-carousel featured-owl-carousel">
-                    <div class="featured-item" data-aos-duration="800" data-aos="fade-up">
-                        <div class="product-container">
-                            <div class="product-card">
-                                <div class="product-box-img">
-                                    <img
-                                        src="https://purepng.com/public/uploads/medium/purepng.com-white-jaguar-xf-2-carcarvehicletransportjaguar-961524650637egafd.png"
-                                        alt="">
-                                </div>
-                                <div class="product-box-content text-center">
-                                    <h1>JAGUAR CX-200</h1>
-                                    <h3>Sport Car</h3>
-                                    <p>Price: 100$ / DAY</p>
-                                    <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>
+                    @foreach($featured_cars as $featured_car)
+                        <div class="featured-item" data-aos-duration="800" data-aos="fade-up">
+                            <div class="product-container">
+                                <div class="product-card">
+                                    <div class="product-box-img">
+                                        <img
+                                            src="{{ asset('/storage/images/'.$featured_car->image) }}"
+                                            alt="{{$featured_car->name}}">
+                                    </div>
+                                    <div class="product-box-content text-center">
+                                        <h1>{{$featured_car->name}}</h1>
+                                        <h3>{{$featured_car->type}}</h3>
+                                        <p>Price: {{$featured_car->price}}$ / DAY</p>
+                                        <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="featured-item" data-aos-duration="1200" data-aos="fade-up">
-                        <div class="product-container">
-                            <div class="product-card">
-                                <div class="product-box-img">
-                                    <img
-                                        src="https://purepng.com/public/uploads/medium/purepng.com-white-jaguar-xf-2-carcarvehicletransportjaguar-961524650637egafd.png"
-                                        alt="">
-                                </div>
-                                <div class="product-box-content text-center">
-                                    <h1>JAGUAR CX-200</h1>
-                                    <h3>Sport Car</h3>
-                                    <p>Price: 100$ / DAY</p>
-                                    <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>
+                    @endforeach
+{{--                    <div class="featured-item" data-aos-duration="1200" data-aos="fade-up">--}}
+{{--                        <div class="product-container">--}}
+{{--                            <div class="product-card">--}}
+{{--                                <div class="product-box-img">--}}
+{{--                                    <img--}}
+{{--                                        src="https://purepng.com/public/uploads/medium/purepng.com-white-jaguar-xf-2-carcarvehicletransportjaguar-961524650637egafd.png"--}}
+{{--                                        alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="product-box-content text-center">--}}
+{{--                                    <h1>JAGUAR CX-200</h1>--}}
+{{--                                    <h3>Sport Car</h3>--}}
+{{--                                    <p>Price: 100$ / DAY</p>--}}
+{{--                                    <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>--}}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-item" data-aos-duration="1600" data-aos="fade-up">
-                        <div class="product-container">
-                            <div class="product-card">
-                                <div class="product-box-img">
-                                    <img
-                                        src="https://purepng.com/public/uploads/medium/purepng.com-white-jaguar-xf-2-carcarvehicletransportjaguar-961524650637egafd.png"
-                                        alt="">
-                                </div>
-                                <div class="product-box-content text-center">
-                                    <h1>JAGUAR CX-200</h1>
-                                    <h3>Sport Car</h3>
-                                    <p>Price: 100$ / DAY</p>
-                                    <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="featured-item" data-aos-duration="1600" data-aos="fade-up">--}}
+{{--                        <div class="product-container">--}}
+{{--                            <div class="product-card">--}}
+{{--                                <div class="product-box-img">--}}
+{{--                                    <img--}}
+{{--                                        src="https://purepng.com/public/uploads/medium/purepng.com-white-jaguar-xf-2-carcarvehicletransportjaguar-961524650637egafd.png"--}}
+{{--                                        alt="">--}}
+{{--                                </div>--}}
+{{--                                <div class="product-box-content text-center">--}}
+{{--                                    <h1>JAGUAR CX-200</h1>--}}
+{{--                                    <h3>Sport Car</h3>--}}
+{{--                                    <p>Price: 100$ / DAY</p>--}}
+{{--                                    <a href="#" class="btn product-order-button text-bold">ORDER NOW</a>--}}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
